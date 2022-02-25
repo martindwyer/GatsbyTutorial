@@ -1,11 +1,14 @@
 import React from "react"
-import { Link } from "gatsby"
+import AllRecipes from "../components/AllRecipes"
+
 import Layout from "../components/Layout"
 
 const Recipes = () => {
   return (
     <Layout>
-      <h1>Recipes</h1>
+      <div className="page">
+        <AllRecipes />
+      </div>
     </Layout>
   )
 }
