@@ -3,7 +3,7 @@ import AllRecipes from "../components/AllRecipes"
 
 import Layout from "../components/Layout"
 
-const Recipes = () => {
+const Recipes = ({ recipes }) => {
   return (
     <Layout>
       <div className="page">
