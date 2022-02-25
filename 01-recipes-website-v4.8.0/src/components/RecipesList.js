@@ -5,7 +5,7 @@ import slugify from "slugify"
 
 const RecipesList = ({ recipes = [] }) => {
   return (
-    <div className="recipes-list page">
+    <div className="recipes-list">
       {recipes.map((recipe, index) => {
         const { id, title, image, prepTime, cookTime } = recipe
         const pathToImage = getImage(image)

@@ -3,12 +3,14 @@ import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import RecipesList from "../components/RecipesList"
+import SearchEngineOptimization from "../components/SearchEngineOptimization"
 
 export default function Home({ data }) {
   const recipes = data.allContentfulRecipe.nodes
 
   return (
     <Layout>
+      <SearchEngineOptimization title="Home" />
       <main className="page">
         <header className="hero">
           <StaticImage
@@ -25,7 +27,9 @@ export default function Home({ data }) {
             </div>
           </div>
         </header>
-        <RecipesList recipes={recipes} />
+        <div style={{ paddingBottom: "0rem" }}>
+          <RecipesList recipes={recipes} />
+        </div>
       </main>
     </Layout>
   )

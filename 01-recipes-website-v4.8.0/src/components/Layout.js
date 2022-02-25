@@ -9,7 +9,7 @@ const Layout = props => {
   return (
     <React.Fragment>
       <Navbar />
-      {props.children}
+      <div className="page">{props.children}</div>
       <Footer />
     </React.Fragment>
   )
