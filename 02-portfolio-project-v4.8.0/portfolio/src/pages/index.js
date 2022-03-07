@@ -8,19 +8,11 @@ import Seo from "../components/Seo"
 import projects from "../constants/projects"
 
 const IndexPage = () => {
-  const featuredProjects = projects.filter(project => project.featured === true)
-
   return (
     <>
+      <Seo title="Home" />
       <main>
         <Hero />
-        <Services />
-        <Jobs />
-        <Projects
-          title="featured projects"
-          showLink
-          projects={featuredProjects}
-        />
       </main>
     </>
   )

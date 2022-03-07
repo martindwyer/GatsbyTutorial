@@ -5,11 +5,14 @@ import Seo from "../components/Seo"
 import projects from "../constants/projects"
 const ProjectsPage = () => {
   return (
-    <main>
-      <section className="projects-page">
-        <Projects title="all projects" projects={projects} />
-      </section>
-    </main>
+    <>
+      <Seo title="Projects" />
+      <main>
+        <section className="projects-page">
+          <Projects title="all projects" projects={projects} />
+        </section>
+      </main>
+    </>
   )
 }
 

@@ -5,24 +5,28 @@ import { graphql, useStaticQuery } from "gatsby"
 import { Link } from "gatsby"
 import experience from "../constants/experience"
 import education from "../constants/education"
+import certificates from "../constants/certificates"
 
-const Education = () => {
-  const [edIndex, setEdIndex] = React.useState(0)
+const Certificates = () => {
+  const [certIndex, setCertIndex] = React.useState(0)
 
-  const { id, school, shortName, degree, description, dateString } =
-    education[edIndex]
+  const { id, awardedBy, shortName, certs } = certificates[certIndex]
+
+  console.log("certs", certificates)
 
   return (
     <section className="section jobs" style={{ paddingTop: "0rem" }}>
-      <Title title="education" />
+      <Title title="certifications" />
       <div className="jobs-center">
         <div className="btn-container">
-          {education.map((item, index) => {
+          {certificates.map((item, index) => {
             return (
               <button
                 key={index}
-                className={index === edIndex ? "job-btn active-btn" : "job-btn"}
-                onClick={() => setEdIndex(index)}
+                className={
+                  index === certIndex ? "job-btn active-btn" : "job-btn"
+                }
+                onClick={() => setCertIndex(index)}
               >
                 {item.shortName}
               </button>
@@ -30,14 +34,19 @@ const Education = () => {
           })}
         </div>
         <article className="job-info">
-          <h3>{school}</h3>
-          <h4>{degree}</h4>
-          <p className="job-date">{dateString}</p>
-          {description.map((item, index) => {
+          <h3>{awardedBy}</h3>
+
+          {certs.map((item, index) => {
             return (
               <div key={index} className="job-desc">
                 <FaAngleDoubleRight className="job-icon" />
-                <p>{item}</p>
+                <p>
+                  {item.name} earned in {item.dateString} (view{" "}
+                  <a href={item.url} target="_blank">
+                    here
+                  </a>
+                  )
+                </p>
               </div>
             )
           })}
@@ -47,4 +56,4 @@ const Education = () => {
   )
 }
 
-export default Education
+export default Certificates

@@ -12,7 +12,7 @@ const Projects = ({ title, projects }) => {
         {projects.map((project, index) => {
           return <Project key={index} project={project} />
         })}
-        <Link to="projects" className="btn center-btn">
+        <Link to="/projects" className="btn center-btn">
           projects
         </Link>
       </div>
