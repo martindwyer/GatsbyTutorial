@@ -2,7 +2,7 @@
 
 This repository contains notes and coding from the Gatsby Tutorial class taught by John Smilga on Udemy. The notes and code here may vary somewhat from those presented in the course. This repository uses Gatsby v4.8.0 while the course materials use v3.0.1. There are also some minor variations in npm package versions which can be gleaned from the package.json file in each project.
 
-In addition to an excellent introduction to Gatsby, the course also offers introduction to commonly used plugins such as image, file system, and helmet. The course also offers an excellent chance to use headless CMS providers including Contentful and Strapi.
+In addition to an excellent introduction to Gatsby, the course also offers introduction to commonly used plugins such as image, file system, and helmet. The course also offers an excellent chance to use headless CMS providers including Contentful.
 
 Course Description:
 
